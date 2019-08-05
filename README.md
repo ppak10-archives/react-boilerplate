@@ -7,15 +7,19 @@ Front-end boilerplate for creating a project in react
   * Includes hot loading to show live changes
 * Production Build Environment: `npm start` and open `localhost:8080`
 
+## Features
+
 Includes:
 * Builds
   * Development
   * Production
+* State Management
+  * Redux
 * Style Preprocessors
-  * Sass
+  * Less
 * Linters
-  * eslint
-  * stylelint
+  * EsLint
+  * StyleLint
 * Pre-commit checks
   * Husky
   * Prettier

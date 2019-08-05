@@ -11,8 +11,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Navigation} from './Navigation';
 
 // Pages
-import {AboutPage} from '../pages/About';
-import {HomePage} from '../pages/Home';
+import {AboutPage} from '../pages/About.component';
+import {HomePage} from '../pages/Home.container';
 
 export const App = () => (
   <Router>

@@ -6,6 +6,10 @@
 // Node Modules
 import React from 'react';
 import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+
+// Store
+import {configureStore} from './store';
 
 // Style
 import './style';
@@ -14,4 +18,9 @@ import './style';
 import {App} from './components/App';
 
 // Document Element
-render(<App />, document.getElementById('root'));
+render(
+    <Provider store={configureStore()}>
+      <App />
+    </Provider>,
+    document.getElementById('root'),
+);
