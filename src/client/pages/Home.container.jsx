@@ -7,7 +7,7 @@
 import {connect} from 'react-redux';
 
 // Actions
-import {addTodoItem} from '../actions/todos';
+import {addTodoItem, removeTodoItem} from '../actions/todos';
 
 // Component
 import HomePageComponent from './Home.component';
@@ -18,6 +18,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   addTodoItem: (todoItem) => dispatch(addTodoItem(todoItem)),
+  removeTodoItem: (todoId) => dispatch(removeTodoItem(todoId)),
 });
 
 export const HomePage = connect(

@@ -4,7 +4,17 @@
  */
 
 const initialState = {
-  list: ['hello world', 'test'],
+  list: [
+    {
+      name: 'hello world',
+      id: 0,
+    },
+    {
+      name: 'test',
+      id: 1,
+    },
+  ],
+  nextId: 2,
 };
 
 export const todos = (state = initialState, {type, ...payload}) => {
@@ -12,11 +22,19 @@ export const todos = (state = initialState, {type, ...payload}) => {
     case 'ADD_TODO_ITEM':
       return {
         ...state,
-        list: [...state.list, payload.todoItem],
+        list: [
+          ...state.list,
+          {
+            name: payload.todoItem,
+            id: state.nextId,
+          },
+        ],
+        nextId: (state.nextId += 1),
       };
     case 'REMOVE_TODO_ITEM':
       return {
         ...state,
+        list: [...state.list.filter((item) => item.id !== payload.todoId)],
       };
     case 'RESOLVE_TODO_ITEM':
       return {

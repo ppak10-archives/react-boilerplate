@@ -41,13 +41,17 @@ const HomePage = (props) => {
           </button>
         </div>
       </div>
-      <TodoList todoList={props.todoList} />
+      <TodoList
+        removeTodoItem={props.removeTodoItem}
+        todoList={props.todoList}
+      />
     </div>
   );
 };
 
 HomePage.propTypes = {
   addTodoItem: ACTION,
+  removeTodoItem: ACTION,
   todoList: TODO_ITEMS,
 };
 

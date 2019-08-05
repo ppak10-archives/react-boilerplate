@@ -9,14 +9,15 @@ import React from 'react';
 // Constants
 import {TODO_ITEMS} from '../constants/proptypes';
 
-export const TodoList = ({todoList}) => {
+export const TodoList = ({removeTodoItem, todoList}) => {
   const todoItemsHtml = todoList.map((item, index) => (
     <button
       className="btn btn-primary btn-lg btn-block"
       key={index}
+      onClick={() => removeTodoItem(item.id)}
       type="button"
     >
-      {item}
+      {item.name}
     </button>
   ));
 

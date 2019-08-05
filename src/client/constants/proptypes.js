@@ -15,4 +15,8 @@ export const NUMBER = PropTypes.number.isRequired;
 export const STRING = PropTypes.string.isRequired;
 
 // Todo Items
-export const TODO_ITEMS = PropTypes.arrayOf(STRING);
+const TODO_ITEM = PropTypes.shape({
+  name: STRING,
+  id: NUMBER,
+});
+export const TODO_ITEMS = PropTypes.arrayOf(TODO_ITEM);
