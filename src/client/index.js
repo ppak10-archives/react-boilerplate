@@ -19,8 +19,8 @@ import {App} from './components/App';
 
 // Document Element
 render(
-    <Provider store={configureStore()}>
-      <App />
-    </Provider>,
-    document.getElementById('root'),
+  <Provider store={configureStore()}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
 );
